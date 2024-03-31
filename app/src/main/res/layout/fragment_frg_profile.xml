@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.frg_profile">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="24dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_regular"
+                android:text="google_logo Account"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:id="@+id/constraint3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint2"
+            app:layout_constraintBottom_toTopOf="@id/emailBox">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_user_avatar"
+                app:cardCornerRadius="200dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/constraint3"
+                app:layout_constraintBottom_toTopOf="@id/tv_username"
+                app:layout_constraintLeft_toLeftOf="@id/constraint3"
+                app:layout_constraintRight_toRightOf="@id/constraint3">
+
+                <ImageView
+                    android:id="@+id/iv_user_avatar"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background">
+
+                </ImageView>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:layout_marginTop="24dp"
+                android:textSize="24dp"
+                app:layout_constraintTop_toBottomOf="@id/cv_user_avatar"
+                app:layout_constraintLeft_toLeftOf="@id/constraint3"
+                app:layout_constraintRight_toRightOf="@id/constraint3"
+                android:fontFamily="@font/product_sans_regular"></TextView>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tv_user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textSize="14dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_username"
+                app:layout_constraintLeft_toLeftOf="@id/constraint3"
+                app:layout_constraintRight_toRightOf="@id/constraint3"
+                android:fontFamily="@font/product_sans_regular"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:fontFamily="@font/product_sans_regular"
+            android:id="@+id/emailBox"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint3">
+
+            <EditText
+                android:fontFamily="@font/product_sans_regular"
+                android:id="@+id/editTextEmail"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="@string/email"
+                android:hint="Email or phone"
+                android:inputType="text"
+                android:selectAllOnFocus="false"
+                android:singleLine="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:passwordToggleEnabled="true"
+            android:fontFamily="@font/product_sans_regular"
+            android:id="@+id/passwordBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailBox"
+            tools:layout_editor_absoluteY="183dp">
+
+            <EditText
+                android:fontFamily="@font/product_sans_regular"
+                android:id="@+id/editTextPassword"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="@string/password"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="false"
+                android:singleLine="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/password_next_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1A73E9"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="Update"
+            app:cornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordBox" />
+
+        <Button
+            android:id="@+id/nigger_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/material_dynamic_neutral_variant90"
+            android:textColor="@color/design_default_color_error"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="Log out"
+            app:cornerRadius="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordBox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
