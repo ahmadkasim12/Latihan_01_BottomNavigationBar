@@ -231,6 +231,39 @@
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <ImageView
+            android:id="@+id/iv_balok"
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:src="@drawable/cuboid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint_br_balok_container_1" />
+
+        <TextView
+            android:id="@+id/tv_balok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/times_new_roman_italic"
+            android:text="A = 2(pl + pt + lt)"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_balok"></TextView>
+
+        <TextView
+            android:id="@+id/tv_balok2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/times_new_roman_italic"
+            android:text="V = p.l.t"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_balok"></TextView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

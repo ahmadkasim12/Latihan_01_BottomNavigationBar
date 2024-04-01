@@ -3,4 +3,5 @@
     <item name="bottom_navigation_view" type="id" />
     <item name="rv_tv_row_title" type="id" />
     <item name="constraint_recycler_view" type="id" />
+    <item name="constraint_bd_segitiga_container" type="id" />
 </resources>

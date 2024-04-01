@@ -25,21 +25,21 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                app:layout_constraintStart_toStartOf="@id/google_logo_constraint"
-                app:layout_constraintTop_toTopOf="@id/google_logo_constraint"
-                app:layout_constraintBottom_toBottomOf="@id/google_logo_constraint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/product_sans_regular"
                 android:text="google_logo Calculator"
-                android:textSize="18dp"></TextView>
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@id/google_logo_constraint"
+                app:layout_constraintStart_toStartOf="@id/google_logo_constraint"
+                app:layout_constraintTop_toTopOf="@id/google_logo_constraint"></TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_marginVertical="24dp"
             android:id="@+id/constraint_br_bola_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/google_logo_constraint">
@@ -69,13 +69,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_marginTop="24dp"
             android:id="@+id/constraint_br_bola_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/constraint_br_bola_title"
+            android:layout_marginTop="24dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint_br_bola_title">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_br_bola_input1"
@@ -105,9 +105,9 @@
                 android:id="@+id/btn_br_bola_calculate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
                 android:backgroundTint="#1A73E9"
                 android:fontFamily="@font/product_sans_regular"
-                android:layout_marginLeft="16dp"
                 android:text="Hitung"
                 app:cornerRadius="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -117,24 +117,24 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_marginTop="16dp"
             android:id="@+id/constraint_br_bola_container_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/constraint_br_bola_container"
+            android:layout_marginTop="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint_br_bola_container">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_br_bola_output"
-                android:layout_marginRight="16dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
                 android:fontFamily="@font/product_sans_regular"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/til_br_bola_output_1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/til_br_bola_output_1">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <EditText
                     android:id="@+id/et_br_bola_output"
@@ -177,6 +177,37 @@
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/iv_bola"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/sphere"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint_br_bola_container_1" />
 
+        <TextView
+            android:id="@+id/tv_bola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/times_new_roman_italic"
+            android:text="A = 4πr²"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_bola"></TextView>
+
+        <TextView
+            android:id="@+id/tv_bola2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/times_new_roman_italic"
+            android:text="V = 4/3 πr³"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bola"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

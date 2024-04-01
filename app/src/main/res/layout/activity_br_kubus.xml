@@ -177,6 +177,38 @@
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <ImageView
+            android:id="@+id/iv_kubus"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/cube"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint_br_kubus_container_1" />
+
+        <TextView
+            android:id="@+id/tv_kubus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/times_new_roman_italic"
+            android:text="A = 6(s²)"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_kubus"></TextView>
+
+        <TextView
+            android:id="@+id/tv_kubus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/times_new_roman_italic"
+            android:text="V = s³"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_kubus"></TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
